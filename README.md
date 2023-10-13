@@ -8,16 +8,12 @@ If you are unfamiliar with <a href='https://docs.ntfy.sh/'>ntfy</a>, the big tak
 
 ## Installation
 
----
-
 1. In sd-webui, open up `Settings -> Extensions -> Install from URL`
 2. Copy `https://github.com/Proryanator/sd-webui-ntfy.git` and paste it into the "URL for extension's git repository" and click `Install`
 4. Once installed, go back to the `Installed Tab` and click `Apply and restart UI`
 
 
 ## Quick Setup Guide
-
----
 
 After installing, this extension is enabled by default for ease of use. You will need to make 1 change though in settings.
 
@@ -30,9 +26,31 @@ After installing, this extension is enabled by default for ease of use. You will
 
 For message customization or other details, see the next section.
 
-## More Configuration
+## Troubleshooting and Known Limitations
 
----
+### Troubleshooting
+
+<i>-> I'm not getting notifications with default settings.</i>
+
+Double check that you set the Topic Name; without this there will be nowhere for messages to go. If that is not the case, maybe you found a bug! Please submit an issue or open a discussion.
+
+<i>-> I started a long running job on mobile, and my session ended and I got a message from ntfy. Did the whole job end?</i>
+
+Maybe! If there wasn't an error that kicked you out (i.e. ran out of RAM, some other script error, etc) your images are probably still being generated (and you'll need to check your server output to see when it's done).
+
+However if when you check your server logs, you see an error, yeah the job actually ended early. Try changing your settings, or avoid doing long jobs on a mobile device.
+
+### Known Limitations
+
+<i>-> Getting kicked out of a mobile session</i>
+
+This is a common occurance even without this extenstion. But while using this extension, your mobile session kicks will trigger a ntfy message saying the job was done. It's suggested that for long-running jobs (such as permutations or combinations using prompt matrices) that you start these on an actual computer and leave the browser window open.
+
+<i>-> No longer receiving messages from ntfy after heavy use</i>
+
+Ntfy may have limit/rate limits on it's public service. If you find yourself running into issues like this, consider hosting your own ntfy instance, it's easy to do.
+
+## More Configuration
 
 You have more config options if you so choose to change them. Here's all the settings available to you:
 
@@ -41,8 +59,6 @@ You have more config options if you so choose to change them. Here's all the set
 If you have your own private server of `ntfy` running, simply update the url in the settings. You are also more than welcome to change the default message being sent.
 
 ## Future improvements:
-
----
 
 - [ ] add notification for server startup
 - [ ] add notification for when training on a dataset has completed
