@@ -11,8 +11,7 @@ If you are unfamiliar with <a href='https://docs.ntfy.sh/'>ntfy</a>, the big tak
 ---
 
 1. In sd-webui, open up `Settings -> Extensions -> Install from URL`
-2. Copy the https url of this project in github (not the url in your browser, the one you get from opening `Code`)
-3. Paste that url into the "URL for extension's git repository" and click `Install`
+2. Copy `https://github.com/Proryanator/sd-webui-ntfy.git` and paste it into the "URL for extension's git repository" and click `Install`
 4. Once installed, go back to the `Installed Tab` and click `Apply and restart UI`
 
 
